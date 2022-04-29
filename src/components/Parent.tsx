@@ -1,3 +1,5 @@
+import EventParent from './EventsAsProps/EventParent';
+import StyleParent from './StylesProps/StyleParent';
 import Greet from './TypingProps/Greet';
 
 function Parent() {
@@ -32,6 +34,8 @@ function Parent() {
       names = {names}
       status = {"loading"}
         />
+        <EventParent />
+        <StyleParent />
     </div>
   );
 }

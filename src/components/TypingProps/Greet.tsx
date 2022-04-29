@@ -21,15 +21,15 @@ const Greet = (props:GreetProps) => {
    return(
     <div>
       <ul>
-        <li>Name string{props.name}</li>
-        <li>Number {props.messageCount}</li>
-        <li>Boolean{props.isLoggedIn? "loged in" : "not loged in"}</li>
-        <li>Object Fist: {props.personName.first}, Last: {props.personName.last}</li>
-        {props.names.map((fullname) => (
-        <li>{fullname.first} {fullname.last}</li>
+        <li key={props.name}>Name string{props.name}</li>
+        <li  key={props.messageCount}>Number {props.messageCount}</li>
+        <li  key='1'>Boolean{props.isLoggedIn? "loged in" : "not loged in"}</li>
+        <li key={props.personName.first}>Object Fist: {props.personName.first}, Last: {props.personName.last}</li>
+        {props.names.map((fullname, i) => (
+        <li key={i}>{fullname.first} {fullname.last}</li>
 
         ))}
-        {props.status === "loading"? (<li>Loading</li>) : (<li>Data Fetched</li>) }
+        {props.status === "loading"? (<li key='2'>Loading</li>) : (<li key='3' >Data Fetched</li>) }
       </ul>
       <ChildGreet> Children props</ChildGreet>
     </div>
