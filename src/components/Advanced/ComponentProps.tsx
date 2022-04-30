@@ -1,6 +1,8 @@
 import React from 'react'
-import ComponentPropsLogin from './ComponentPropsLogin'
-import {ProfName} from './ComponentPropsProfile'
+
+export type ProfName = {
+  name: string
+}
 
 type PrivateProps = {
   loggedIn: boolean,
@@ -15,6 +17,22 @@ function ComponentPropsPrivate({loggedIn, component: Component}:PrivateProps) {
       <ComponentPropsLogin/>
     )
   }
+}
+
+
+function ComponentPropsLogin() {
+  return (
+    <div>
+      <ComponentPropsPrivate loggedIn={true} component={ComponentPropsProfile}  />
+    </div>
+  )
+}
+
+
+function ComponentPropsProfile({name}:ProfName ) {
+  return (
+    <div>ComponentPropsProfile</div>
+  )
 }
 
 export default ComponentPropsPrivate
