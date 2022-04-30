@@ -1,4 +1,6 @@
 import EventParent from './EventsAsProps/EventParent';
+import UseReducer from './Hooks/UseReducer';
+import UseState from './Hooks/UseState';
 import StyleParent from './StylesProps/StyleParent';
 import Greet from './TypingProps/Greet';
 
@@ -36,6 +38,8 @@ function Parent() {
         />
         <EventParent />
         <StyleParent />
+        <UseState />
+        <UseReducer />
     </div>
   );
 }

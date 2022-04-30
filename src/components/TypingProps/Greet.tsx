@@ -1,19 +1,7 @@
 import ChildGreet from "./ChildGreet"
+import { GreetProps } from "./Greet.types"
 
-// ? means prop is optional
 
-type GreetProps={
-  name?:string,
-  messageCount: number,
-  isLoggedIn: boolean,
-  personName: {
-    first:string,
-    last:string,
-  },
-  names:{first:string,
-        last:string }[],
-  status: 'loading' | 'success' | 'error'
-}
 
 const Greet = (props:GreetProps) => {
   // Default value if prop is missing
