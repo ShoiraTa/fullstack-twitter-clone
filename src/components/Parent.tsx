@@ -1,4 +1,5 @@
 import EventParent from './EventsAsProps/EventParent';
+import DataFetchingWithReducer from './Hooks/FetchingWithUseEffect';
 import UseReducer from './Hooks/UseReducer';
 import UseState from './Hooks/UseState';
 import StyleParent from './StylesProps/StyleParent';
@@ -36,10 +37,11 @@ function Parent() {
       names = {names}
       status = {"loading"}
         />
-        <EventParent />
-        <StyleParent />
+        {/* <EventParent />
+        <StyleParent /> */}
         <UseState />
         <UseReducer />
+        <DataFetchingWithReducer />
     </div>
   );
 }
