@@ -1,5 +1,5 @@
 import './App.css';
-import Parent from './components/Parent';
+import Parent from './components/TypescriptBasics/Parent';
 
 function App() {
   
